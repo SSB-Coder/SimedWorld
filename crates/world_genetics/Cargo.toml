@@ -1,0 +1,10 @@
+[package]
+name = "world_genetics"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+description = "Inherited organism blueprints"
+
+[dependencies]
+serde.workspace = true

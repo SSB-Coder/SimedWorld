@@ -1,0 +1,26 @@
+[build-system]
+requires = ["maturin==1.16.0"]
+build-backend = "maturin"
+
+[project]
+name = "world-microcosm"
+dynamic = ["version"]
+description = "Survival-driven artificial-life simulation"
+readme = "README.md"
+requires-python = ">=3.13,<3.14"
+dependencies = ["numpy==2.5.4", "torch==2.14.1"]
+classifiers = [
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Rust",
+    "Operating System :: Microsoft :: Windows",
+]
+
+[project.optional-dependencies]
+liquid = ["ncps==1.0.1"]
+
+[tool.maturin]
+manifest-path = "crates/world_bindings/Cargo.toml"
+python-source = "python"
+module-name = "world._native"
+bindings = "pyo3"
+features = ["extension-module"]

@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+.venv/
+/artifacts/*
+!/artifacts/code-walkthrough.md
+target/
+*.pyd
+*.pdb
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+dist/
+runs/
+.env
+.env.*
+!.env.example

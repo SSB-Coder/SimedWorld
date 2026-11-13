@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "seed": 73,
+  "initial_nutrient": 4296.0,
+  "initial_energy": 3136.0,
+  "mineral_nutrient_per_cell": 6.0,
+  "light_energy_per_cell_per_time": 8.0,
+  "light_gradient": 0.5,
+  "producers": {
+    "count": 64,
+    "tissue_nutrient": 8.0,
+    "reserve_nutrient": 3.0,
+    "reserve_energy": 25.0
+  },
+  "consumers": {
+    "count": 16,
+    "tissue_nutrient": 6.0,
+    "reserve_nutrient": 2.5,
+    "reserve_energy": 20.0
+  },
+  "ecology": {
+    "reproduction": true,
+    "decomposition": true,
+    "consumer_speed": 1.3,
+    "movement_energy_per_distance": 0.1,
+    "perception_radius": 3.0,
+    "feeding_radius": 0.65,
+    "birth_radius": 0.9,
+    "minimum_spacing": 0.25,
+    "decomposition_fraction_per_time": 0.1,
+    "max_population": 256
+  }
+}

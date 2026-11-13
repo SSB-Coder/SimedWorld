@@ -1,0 +1,80 @@
+{
+  "model_id": "world-rules-v0.1",
+  "description": "Hand-calculated transaction storyboard, not an autonomous world run.",
+  "initial_inventory": {
+    "nutrient": 100.0,
+    "chemical_energy": 100.0,
+    "mineral_nutrient": 75.0,
+    "available_external_light": 10.0
+  },
+  "organisms": [
+    {
+      "id": "producer", "photosynthetic": true, "can_ingest": false,
+      "weights": [], "tissue_nutrient": 10.0, "tissue_energy": 20.0,
+      "reserve_nutrient": 5.0, "reserve_energy": 30.0, "age": 4.0
+    },
+    {
+      "id": "consumer", "photosynthetic": false, "can_ingest": true,
+      "weights": [0.25, -0.5], "tissue_nutrient": 8.0, "tissue_energy": 16.0,
+      "reserve_nutrient": 2.0, "reserve_energy": 34.0, "age": 3.0
+    }
+  ],
+  "expected_snapshots": [
+    {
+      "label": "initial", "mineral_nutrient": 75.0,
+      "living_nutrient": 25.0, "living_energy": 100.0,
+      "detritus_nutrient": 0.0, "detritus_energy": 0.0,
+      "heat": 0.0, "mechanical_energy": 0.0, "absorbed_light": 0.0,
+      "living_count": 2, "total_nutrient": 100.0, "accounted_energy": 100.0
+    },
+    {
+      "label": "photosynthesis", "mineral_nutrient": 75.0,
+      "living_nutrient": 25.0, "living_energy": 108.0,
+      "detritus_nutrient": 0.0, "detritus_energy": 0.0,
+      "heat": 2.0, "mechanical_energy": 0.0, "absorbed_light": 10.0,
+      "living_count": 2, "total_nutrient": 100.0, "accounted_energy": 110.0
+    },
+    {
+      "label": "feeding", "mineral_nutrient": 75.0,
+      "living_nutrient": 24.5, "living_energy": 106.5,
+      "detritus_nutrient": 0.5, "detritus_energy": 1.0,
+      "heat": 2.5, "mechanical_energy": 0.0, "absorbed_light": 10.0,
+      "living_count": 2, "total_nutrient": 100.0, "accounted_energy": 110.0
+    },
+    {
+      "label": "growth", "mineral_nutrient": 75.0,
+      "living_nutrient": 24.5, "living_energy": 105.5,
+      "detritus_nutrient": 0.5, "detritus_energy": 1.0,
+      "heat": 3.5, "mechanical_energy": 0.0, "absorbed_light": 10.0,
+      "living_count": 2, "total_nutrient": 100.0, "accounted_energy": 110.0
+    },
+    {
+      "label": "maintenance", "mineral_nutrient": 75.0,
+      "living_nutrient": 24.5, "living_energy": 104.6,
+      "detritus_nutrient": 0.5, "detritus_energy": 1.0,
+      "heat": 4.4, "mechanical_energy": 0.0, "absorbed_light": 10.0,
+      "living_count": 2, "total_nutrient": 100.0, "accounted_energy": 110.0
+    },
+    {
+      "label": "birth", "mineral_nutrient": 75.0,
+      "living_nutrient": 24.5, "living_energy": 102.6,
+      "detritus_nutrient": 0.5, "detritus_energy": 1.0,
+      "heat": 6.4, "mechanical_energy": 0.0, "absorbed_light": 10.0,
+      "living_count": 3, "total_nutrient": 100.0, "accounted_energy": 110.0
+    },
+    {
+      "label": "damage_and_death", "mineral_nutrient": 75.0,
+      "living_nutrient": 11.5, "living_energy": 48.6,
+      "detritus_nutrient": 13.5, "detritus_energy": 55.0,
+      "heat": 6.4, "mechanical_energy": 0.0, "absorbed_light": 10.0,
+      "living_count": 2, "total_nutrient": 100.0, "accounted_energy": 110.0
+    },
+    {
+      "label": "decomposition", "mineral_nutrient": 88.5,
+      "living_nutrient": 11.5, "living_energy": 48.6,
+      "detritus_nutrient": 0.0, "detritus_energy": 0.0,
+      "heat": 61.4, "mechanical_energy": 0.0, "absorbed_light": 10.0,
+      "living_count": 2, "total_nutrient": 100.0, "accounted_energy": 110.0
+    }
+  ]
+}

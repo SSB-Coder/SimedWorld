@@ -1,0 +1,47 @@
+[workspace]
+members = ["crates/world_core", "crates/world_bindings", "crates/world_genetics", "crates/world_viewer"]
+resolver = "3"
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.97.1"
+publish = false
+
+# Only dependencies used by a workspace member enter Cargo.lock.
+[workspace.dependencies]
+world_core = { path = "crates/world_core" }
+world_genetics = { path = "crates/world_genetics" }
+pyo3 = "=0.30.1"
+numpy = "=0.30.0"
+serde = { version = "=1.0.229", features = ["derive"] }
+serde_json = { version = "=1.0.154", features = ["float_roundtrip"] }
+rand = "=0.10.3"
+rand_chacha = "=0.10.0"
+rand_distr = "=0.6.0"
+rayon = "=1.12.0"
+rapier2d = { version = "=0.36.1", features = ["serde-serialize", "enhanced-determinism"] }
+bevy = { version = "=0.20.1", default-features = false, features = ["std", "default_app", "2d_bevy_render", "bevy_winit", "keyboard", "mouse", "default_font", "multi_threaded", "bmp"] }
+
+[profile.dev]
+debug = 0
+incremental = false
+
+[profile.test]
+debug = 0
+incremental = false
+
+[profile.dev.package.world_core]
+opt-level = 3
+
+[profile.dev.package.world_genetics]
+opt-level = 3
+
+[profile.dev.package.world_viewer]
+opt-level = 2
+
+[profile.dev.package.serde_json]
+opt-level = 3
+
+[profile.dev.package.zmij]
+opt-level = 3

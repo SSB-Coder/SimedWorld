@@ -1,0 +1,3 @@
+# Project-local native build utility, distributed as a published Windows wheel.
+# This avoids a separate machine-wide CMake installation.
+cmake==4.4.4

@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "seeds": [1301, 1699, 2081],
+  "tasks": ["foraging", "risk", "transfer", "learning", "memory"],
+  "decisions": 300,
+  "selection_policy": "Select candidates using training/validation seeds before evaluating this frozen suite."
+}

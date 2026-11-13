@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "seed": 73,
+  "initial_nutrient": 4256.0,
+  "initial_energy": 576.0,
+  "mineral_nutrient_per_cell": 1.0,
+  "light_energy_per_cell_per_time": 8.0,
+  "light_gradient": 0.75,
+  "producers": {
+    "count": 64,
+    "tissue_nutrient": 2.0,
+    "reserve_nutrient": 0.5,
+    "reserve_energy": 5.0
+  }
+}

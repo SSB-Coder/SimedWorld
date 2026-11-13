@@ -1,0 +1,9 @@
+{
+  "bevy_egui": {
+    "requested_version": "0.43.1",
+    "status": "deferred",
+    "reason": "The resolved graph includes ttf-parser 0.25.1, which RustSec marks unmaintained. This is an informational maintenance advisory, not a reported exploitable vulnerability. Deferred under the requested conservative dependency policy.",
+    "advisory": "https://rustsec.org/advisories/RUSTSEC-2026-0192.html",
+    "next_action": "Review a maintained font backend or upstream dependency update before enabling this UI integration. Bevy rendering remains a separate dependency."
+  }
+}

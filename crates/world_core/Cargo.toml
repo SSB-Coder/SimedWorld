@@ -1,0 +1,12 @@
+[package]
+name = "world_core"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+description = "Python-independent core of the World project"
+
+[dependencies]
+serde.workspace = true
+serde_json.workspace = true
+world_genetics.workspace = true
